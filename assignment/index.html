@@ -6,54 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>JavaScript Data Types</h1>
-    <script>
-        var a=8;
-        var b=10;
-        var c=10;
-        var d=null;
-        var e;//undefined varible
-        document.write("a and b are equal : " + (a==b));
-        document.write("<br>");
-        document.write("b and c are equal : " + (b==c))
-        document.write("<br>");
-        document.write("The value of d is : " + d);
-        document.write("<br>");
-        document.write("The value of e is : " + e);
-    </script>
-    <p>Click the button to get a time-based greeting:</p>
-    <button onclick="myFunction()">Try it</button>
-    <p id="hour"></p>
-    <p id="greet"></p>
-    <script>
-      function myFunction() {
-          var greeting;
-          var time = new Date().getHours();
-  
-          if (time < 10){
-              greeting = "Good Morning";
-          } 
-          else if (time < 20 ){ 
-              greeting ="Good Day";
-          }
-          else {
-              greeting ="Good Evening";
-          }
-          document.getElementById("hour").innerHTML = "Current Hour is : " + time;
-          document.getElementById("greet").innerHTML = greeting;
-      }
-    </script>
-  <h2>JavaScript While Loop</h2>
-  <p id ="number"></p>   
+  <h2>JavaScript Datatypes, Let keyword and Loops</h2>
+  <p id="result"></p>
   <script>
-     var text="";
-     var i = 0;
-     while ( i < 10 ) {
-         text += "<br>The number is" + i;
-         i++;
-     }
-     document.getElementById("number").innerHTML=text;
-  </script>
+    var i;//i is undefined
+    var text = " ";
+    {
+        let i = 0;//assigning a value for i only within the block
+        while (i<10){
+            text += "The value inside the block: " + i + "</br>";
+            i++;
+        }
+        document.getElementById("result").innerHTML = text;
+    }
 
+    document.write("The value of i outside the block is: " +i);
+  </script>
+    
 </body>
 </html>
